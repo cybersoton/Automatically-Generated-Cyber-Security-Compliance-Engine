@@ -1,9 +1,10 @@
 import csv
 
-with open('<insert text file here>.csv') as compliance_data:
+with open('demo.csv') as compliance_data:
     compliance_data_reader = csv.reader(compliance_data, delimiter=',')
     line_count = 0
     for row in compliance_data_reader:
+        number_of_columns = row.size()
         if line_count == 0:
             print(f'Column names are {"   ".join(row)}')
             line_count += 1
