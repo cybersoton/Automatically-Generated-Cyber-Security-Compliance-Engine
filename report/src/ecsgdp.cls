@@ -183,7 +183,7 @@
       {\large\textbf{\UNIVNAME}\par}
       {\large \facname \par}
       \vfill
-      {\large A \reporttype{} submitted for}
+      {\large An \reporttype{} submitted for}
       {\large the award of \par \degreename \par}
       \vfill
       {\normalsize Supervisor: \supname \par}
