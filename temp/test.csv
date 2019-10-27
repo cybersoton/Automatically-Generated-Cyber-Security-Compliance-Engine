@@ -1,0 +1,9 @@
+Data, Data Type
+Name of person completing form, string
+Position of person completing form, string
+On behalf of (company name), string
+Firewalls, boolean
+Secure Configuration, boolean
+User Access Control, boolean
+Malware Protection, boolean
+Patch Management, boolean
