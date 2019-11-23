@@ -1,15 +1,21 @@
 import csv
 
-with open('demo.csv') as compliance_data:
+tableData = {}
+with open('temp/test.csv') as compliance_data:
     compliance_data_reader = csv.reader(compliance_data, delimiter=',')
     line_count = 0
     for row in compliance_data_reader:
-        number_of_columns = row.size()
+        number_of_columns = len(row)
         if line_count == 0:
-            print(f'Column names are {"   ".join(row)}')
+            print(f'{"   ".join(row)}')
             line_count += 1
         else:
             # row[1] is the 2nd column, not row
-            print(f'{row[0]}\t{row[1]}\t{row[2]}')
+            for column in row:
+                print(f'{column}')
+            tableData[row[0]] = row[1]
             line_count += 1
-    print(f'Processed {line_count} lines.')
+    print(f'Done: Processed {line_count} lines.')
+
+# for dataType in tableData:
+    # print(f'{dataType}\t{tableData.get(dataType)}')
