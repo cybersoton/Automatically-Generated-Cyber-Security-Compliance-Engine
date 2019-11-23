@@ -16,6 +16,3 @@ with open('temp/test.csv') as compliance_data:
             tableData[row[0]] = row[1]
             line_count += 1
     print(f'Done: Processed {line_count} lines.')
-
-# for dataType in tableData:
-    # print(f'{dataType}\t{tableData.get(dataType)}')
