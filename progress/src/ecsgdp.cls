@@ -100,6 +100,7 @@
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{listings}
+\usepackage{makecell}
 \lstset{captionpos=b,
         frame=tb,
         basicstyle=\scriptsize\ttfamily,
