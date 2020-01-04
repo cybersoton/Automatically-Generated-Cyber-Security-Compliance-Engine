@@ -32,6 +32,7 @@
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}}
 \newcommand\btypeout[1]{\bhrule\typeout{\space #1}\bhrule}
 \usepackage{setspace}
+\usepackage{titlesec}
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
@@ -55,8 +56,10 @@
 \lhead[\rm\thepage]{\fancyplain{}{\sl{\rightmark}}}
 \rhead[\fancyplain{}{\sl{\leftmark}}]{\rm\thepage}
 \chead{}\lfoot{}\rfoot{}\cfoot{}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Large}
 \pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{\btypeout{\thechapter\space #1}\markboth{\@chapapp\ \thechapter\ #1}{\@chapapp\ \thechapter\ #1}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{}
 \renewcommand{\subsectionmark}[1]{}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
@@ -98,9 +101,10 @@
 \usepackage{epstopdf}
 \usepackage[scriptsize]{subfigure}
 \usepackage{booktabs}
-\usepackage{rotating}
 \usepackage{listings}
 \usepackage{makecell}
+\usepackage[table]{xcolor}
+\usepackage[figuresright]{rotating}
 \lstset{captionpos=b,
         frame=tb,
         basicstyle=\scriptsize\ttfamily,
